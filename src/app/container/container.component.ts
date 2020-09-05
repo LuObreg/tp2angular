@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BookService } from '../book.service';
+import { GenderService } from '../gender.service';
 
 @Component({
   selector: 'app-container',
@@ -9,14 +11,16 @@ export class ContainerComponent implements OnInit {
 
   list:any = [];
 
-  constructor() { }
+  constructor(private bookService: BookService, private genderService: GenderService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(){
+    this.list = await this.bookService.allBooks()
   }
 
-  addBookToList(aBook){
-    this.list.push(aBook)
+  async addBookToList(aBook){
+    await this.bookService.addBook(aBook);
   }
+
 
   
 

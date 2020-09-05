@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { BookService } from '../book.service';
+import { GenderService } from '../gender.service'
 
 @Component({
   selector: 'app-form',
@@ -8,25 +10,44 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class FormComponent implements OnInit {
   @Output() newBook = new EventEmitter();
 
-  constructor() { }
+  constructor(private bookService: BookService, private genderService: GenderService) { };
 
-  ngOnInit(): void {
-  }
-
+  //de qué forma va??
+  /*book = {
+    name: "",
+    author: "",
+    gender: "",
+    lended: "",
+}*/
   name = "";
   author = "";
-  gender = "";
-  lended = "";
+  gender= "";
+  lended ="";
 
-  addBook(){
-    var book = {
+  genders:any;
+
+  ngOnInit(): void {
+
+    this.genders = this.genderService.genderList();
+
+    console.log("generos ", this.genders);
+
+  }
+
+  async addBook(){
+      var book = {
       name: this.name,
       author: this.author,
       gender: this.gender,
       lended: this.lended
-    }
+      }
 
-    this.newBook.emit(book);
+      await this.bookService.addBook(book);
+
+      this.newBook.emit();
+    }
+    
+    
+   
   }
 
-}

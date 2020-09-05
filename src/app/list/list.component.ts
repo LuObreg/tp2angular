@@ -15,3 +15,5 @@ export class ListComponent implements OnInit {
   }
 
 }
+
+//faltan acá las funciones de préstamo (put modificar book.lended) y borrar (delete book)
