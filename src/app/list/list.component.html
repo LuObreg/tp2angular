@@ -9,6 +9,13 @@
         <th>Eliminar</th>
     </thead>
     <tbody>
-
+        <tr *ngFor="let book of books">
+            <td>{{book.name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.gender}}</td>
+            <td><button (click)="lendBook(book.id)">Prestar/Devolver</button></td>
+            <td><button (click)="deleteBook(book.id)">Borrar</button></td>
+            
+        </tr>
     </tbody>
 </table>

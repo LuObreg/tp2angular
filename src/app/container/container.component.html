@@ -1,2 +1,2 @@
-<app-form></app-form>
-<app-list></app-list>
+<app-form (newBook)="addBookToList($event)"></app-form>
+<app-list [books]="list"></app-list>

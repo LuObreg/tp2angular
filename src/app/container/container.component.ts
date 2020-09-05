@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
+  list:any = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  addBookToList(aBook){
+    this.list.push(aBook)
+  }
+
+  
 
 }
