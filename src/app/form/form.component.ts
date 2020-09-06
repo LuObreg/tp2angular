@@ -47,7 +47,5 @@ export class FormComponent implements OnInit {
       this.newBook.emit();
     }
     
-    
-   
   }
 

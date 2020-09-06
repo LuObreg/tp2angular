@@ -21,7 +21,4 @@ export class ContainerComponent implements OnInit {
     await this.bookService.addBook(aBook);
   }
 
-
-  
-
 }
