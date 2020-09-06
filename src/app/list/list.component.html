@@ -5,6 +5,7 @@
         <th>Género</th>
         <!-- Tiene un nombre y un botón, al clickear este botón abre un input que permite modificar su valor!-->
         <th>Préstamo</th>
+        <th>Prestado a</th>
         <!-- Al clickear este botón elimina el registro del servidor-->
         <th>Eliminar</th>
     </thead>
@@ -14,6 +15,7 @@
             <td>{{book.author}}</td>
             <td>{{book.gender}}</td>
             <td><button (click)="lendBook(book.id)">Prestar/Devolver</button></td>
+            <td>{{book.lended}}</td>
             <td><button (click)="deleteBook(book.id)">Borrar</button></td>
             
         </tr>

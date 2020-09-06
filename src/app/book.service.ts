@@ -6,6 +6,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BookService {
+  static deleteBook(idBook: any) {
+    throw new Error("Method not implemented.");
+  }
 
   url = 'http://aqueous-spire-30568.herokuapp.com/';
 

@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { BookService } from '../book.service';
+
 
 @Component({
   selector: 'app-list',
@@ -9,14 +11,17 @@ export class ListComponent implements OnInit {
 
   @Input() books = [];
 
-  constructor() { }
+  constructor(private bookService : BookService) { }
 
   ngOnInit(): void {
      
+    }
+    deleteBook(idBook){
+      this.bookService.deleteBook(idBook);
     }
   }
 
 
 
-//faltan acá las funciones de préstamo (put modificar book.lended) y borrar (delete book)
+//faltan acá las funciones de  borrar (delete book)
 
