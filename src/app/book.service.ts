@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http'
 })
 export class BookService {
 
-  url = 'https://aqueous-spire-30568.herokuapp.com/';
+  url = 'http://aqueous-spire-30568.herokuapp.com/';
 
   constructor(private http: HttpClient) { }
 

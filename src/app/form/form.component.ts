@@ -43,7 +43,7 @@ export class FormComponent implements OnInit {
       }
 
       await this.bookService.addBook(book);
-
+      console.log(book);      
       this.newBook.emit();
     }
     
