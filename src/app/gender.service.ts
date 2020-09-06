@@ -16,10 +16,11 @@ export class GenderService {
   // Metodo GET 
 async genderList(){
   try{
-      let result: any;
 
-      result = await this.http.get(this.url+"genero").toPromise();
-      return result;
+      let generos:any = await this.http.get(this.url+"genero").toPromise();
+      return generos;
+      
+      console.log(generos);
 
   }
   catch(e){
@@ -35,6 +36,7 @@ async genderAdd(aBook){
   console.log(result);
 
     return result;
+    
   }
   catch(error){
     console.log(error);

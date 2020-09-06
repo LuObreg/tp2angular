@@ -12,13 +12,6 @@ export class FormComponent implements OnInit {
 
   constructor(private bookService: BookService, private genderService: GenderService) { };
 
-  //de qué forma va??
-  /*book = {
-    name: "",
-    author: "",
-    gender: "",
-    lended: "",
-}*/
   name = "";
   author = "";
   gender= "";
@@ -26,9 +19,9 @@ export class FormComponent implements OnInit {
 
   genders:any;
 
-  ngOnInit(): void {
+  async ngOnInit() {
 
-    this.genders = this.genderService.genderList();
+    this.genders = await this.genderService.genderList();
 
     console.log("generos ", this.genders);
 
