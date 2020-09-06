@@ -12,8 +12,11 @@ export class ListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+     
+    }
   }
 
-}
+
 
 //faltan acá las funciones de préstamo (put modificar book.lended) y borrar (delete book)
+

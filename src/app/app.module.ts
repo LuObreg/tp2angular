@@ -8,13 +8,15 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { ContainerComponent } from './container/container.component';
 import { from } from 'rxjs';
+import { LendComponent } from './lend/lend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
     ListComponent,
-    ContainerComponent
+    ContainerComponent,
+    LendComponent
   ],
   imports: [
     BrowserModule,

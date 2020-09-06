@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -20,10 +20,10 @@ export class BookService {
 // Metodo POST 
 async addBook(aBook){
   try{
-  let result: any;
-  result = await this.http.post(this.url+"libro", aBook).toPromise();
-  console.log(result);
-
+    console.log(aBook);
+    let result: any;
+    result = await this.http.post(this.url+"libro", aBook).toPromise();
+    console.log(result);
     return result;
   }
   catch(error){
@@ -51,10 +51,7 @@ async allBooks(){
 async deleteBook(id){
    try{
       let result: any;
-      
-      // localhost:3000/libro/aaa111
       result = await this.http.delete(this.url+"libro/"+id).toPromise();
-
       return true;
 
     }
