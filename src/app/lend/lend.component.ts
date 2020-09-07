@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService } from '../book.service';
+//Intentamos hacerlo con un componente aparte pero no funcionó
 
+import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-lend',
   templateUrl: './lend.component.html',
@@ -8,7 +8,7 @@ import { BookService } from '../book.service';
 })
 export class LendComponent implements OnInit {
 
-  constructor(private bookService: BookService) { }
+  constructor() { }
 
   ngOnInit(): void {
 
@@ -22,7 +22,7 @@ async lendBook(){
   var book = {
   lended: this.lended
   }
-  await this.bookService.lendBook(book);
+  //await this.bookService.lendBook(book);
   console.log(book);      
 }
 }

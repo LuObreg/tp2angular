@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)='lendBook()'>
     <label for="lended">¿A quién presté este libro?</label>
     <input type="text" name="lended" id="lended" [(ngModel)]="lended">
     <button type="submit">Guardar</button>

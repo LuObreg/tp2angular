@@ -16,12 +16,18 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
      
     }
-    deleteBook(idBook){
-      this.bookService.deleteBook(idBook);
+    //Prestar libro
+    /*lended ="";
+    async lendBook(book.id){
+      var aBook = {
+        book: book.id,
+        lended: this.lended
+      }
+      await this.bookService.lendBook(aBook)
+    }*/
+    
+    //Eliminar libro (no está en la api)
+    async deleteBook(idBook){
+      await this.bookService.deleteBook(idBook);
     }
   }
-
-
-
-//faltan acá las funciones de  borrar (delete book)
-
