@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class BookService {
+  
   static deleteBook(idBook: any) {
     throw new Error("Method not implemented.");
   }
@@ -50,7 +51,7 @@ async allBooks(){
     
     }}
 
-//Metodo DELETE 
+//Metodo DELETE --> al final no estaba en la api
 async deleteBook(id){
    try{
       let result: any;
@@ -71,7 +72,6 @@ async deleteBook(id){
           lended: aBook.lended};
         let result: any;
         result = await this.http.put(this.url+"libro/"+aBook.bookId, changes).toPromise();
-        return result
       }
       catch(e){
         console.log(e);

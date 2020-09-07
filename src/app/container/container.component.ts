@@ -14,11 +14,13 @@ export class ContainerComponent implements OnInit {
   constructor(private bookService: BookService, private genderService: GenderService) { }
 
   async ngOnInit(){
-    this.list = await this.bookService.allBooks()
+    //recibir la lista de todos los libros de nuestro servidor
+    this.list = await this.bookService.allBooks();
   }
-
+//agregar un libro a nuestro servidor
   async addBookToList(aBook){
     await this.bookService.addBook(aBook);
+    
   }
 
 }

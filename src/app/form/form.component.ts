@@ -11,7 +11,8 @@ export class FormComponent implements OnInit {
   @Output() newBook = new EventEmitter();
 
   constructor(private bookService: BookService, private genderService: GenderService) { };
-
+//tomar los datos del formulario
+  id = "";
   name = "";
   author = "";
   gender= "";
@@ -19,20 +20,20 @@ export class FormComponent implements OnInit {
 
   genders:any;
 
+//recibir la lista de géneros del servidor
   async ngOnInit() {
 
     this.genders = await this.genderService.genderList();
 
-    console.log("generos ", this.genders);
-
   }
-
+//agregar los datos a un array de libro y emitir el evento
   async addBook(){
       var book = {
+      id: this.id,
       name: this.name,
       author: this.author,
-      gender: this.gender,
-      lended: this.lended
+      lended: this.lended,
+      gender: this.gender
       }
 
       await this.bookService.addBook(book);

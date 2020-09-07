@@ -20,8 +20,6 @@ async genderList(){
       let generos:any = await this.http.get(this.url+"genero").toPromise();
       return generos;
       
-      console.log(generos);
-
   }
   catch(e){
     console.log(e);
