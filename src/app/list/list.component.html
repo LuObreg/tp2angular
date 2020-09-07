@@ -1,13 +1,13 @@
-<table>
+<table class="table table-hover">
     <thead>
-        <th>Título</th>
-        <th>Autor</th>
-        <th>Género</th>
+        <th scope="col">Título</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Género</th>
         <!-- Tiene un nombre y un botón, al clickear este botón abre un input que permite modificar su valor!-->
-        <th>Préstamo</th>
-        <th>Prestado a</th>
+        <th scope="col" colspan="2">Préstamo</th>
+        <th scope="col">Prestado a</th>
         <!-- Al clickear este botón elimina el registro del servidor-->
-        <th>Eliminar</th>
+        <th scope="col">Eliminar</th>
     </thead>
     <tbody>
         <tr *ngFor="let book of books">
@@ -15,9 +15,9 @@
             <td>{{book.author}}</td>
             <td>{{book.gender}}</td>
             <td><label for= "lended"></label>
-                <input type="text" name="lended" id={{book.id}} placeholder="Ingrese un nombre" [(ngModel)]="person"></td><td><button (click)="lendBook(book)">Prestar/Devolver</button></td>
+                <input type="text" name="lended" id={{book.id}} placeholder="Ingrese un nombre" [(ngModel)]="person"></td><td><button class="btn btn-warning" (click)="lendBook(book)">Prestar/Devolver</button></td>
             <td>{{book.lended}}</td>
-            <td><button (click)="deleteBook(book.id)">Borrar</button></td>
+            <td><button (click)="deleteBook(book.id)" class="btn btn-danger">Borrar</button></td>
             
         </tr>
     </tbody>
