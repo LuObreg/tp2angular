@@ -64,13 +64,14 @@ async deleteBook(id){
     }
    }
 
- 
-
- // Metodo PUT 
+  // Metodo PUT --> logramos hacerlo funcionar pero los cambios solo se ven al actualizar la página
   async lendBook(aBook){
       try{
+        let changes = {
+          lended: aBook.lended};
         let result: any;
-        result = await this.http.put(this.url+"libro/"+aBook.id, aBook.lended).toPromise();
+        result = await this.http.put(this.url+"libro/"+aBook.bookId, changes).toPromise();
+        return result
       }
       catch(e){
         console.log(e);

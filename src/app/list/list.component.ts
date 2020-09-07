@@ -16,15 +16,17 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
      
     }
+    
     //Prestar libro
-    /*lended ="";
-    async lendBook(book.id){
+    person ="";
+    async lendBook(book){
       var aBook = {
-        book: book.id,
-        lended: this.lended
+        bookId: book.id,
+        lended: this.person
       }
-      await this.bookService.lendBook(aBook)
-    }*/
+      await this.bookService.lendBook(aBook);
+      console.log(aBook);
+    }
     
     //Eliminar libro (no está en la api)
     async deleteBook(idBook){

@@ -15,7 +15,7 @@
             <td>{{book.author}}</td>
             <td>{{book.gender}}</td>
             <td><label for= "lended"></label>
-                <input type="text" name="lended" id="lended" placeholder="Ingrese un nombre" [(ngModel)]="lended"><button (click)="lendBook(book.id)">Prestar/Devolver</button></td>
+                <input type="text" name="lended" id={{book.id}} placeholder="Ingrese un nombre" [(ngModel)]="person"></td><td><button (click)="lendBook(book)">Prestar/Devolver</button></td>
             <td>{{book.lended}}</td>
             <td><button (click)="deleteBook(book.id)">Borrar</button></td>
             
