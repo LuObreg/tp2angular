@@ -12,11 +12,9 @@ export class FormComponent implements OnInit {
 
   constructor(private bookService: BookService, private genderService: GenderService) { };
 //tomar los datos del formulario
-  id = "";
   name = "";
   author = "";
   gender= "";
-  lended ="";
 
   genders:any;
 
@@ -29,10 +27,8 @@ export class FormComponent implements OnInit {
 //agregar los datos a un array de libro y emitir el evento
   async addBook(){
       var book = {
-      id: this.id,
       name: this.name,
       author: this.author,
-      lended: this.lended,
       gender: this.gender
       }
 
