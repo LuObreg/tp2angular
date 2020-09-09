@@ -14,7 +14,8 @@ export class FormComponent implements OnInit {
 //tomar los datos del formulario
   name = "";
   author = "";
-  gender= "";
+  gender = "";
+  lended = "";
 
   genders:any;
 
@@ -29,7 +30,8 @@ export class FormComponent implements OnInit {
       var book = {
       name: this.name,
       author: this.author,
-      gender: this.gender
+      gender: this.gender,
+      lended: this.lended
       }
 
       await this.bookService.addBook(book);
