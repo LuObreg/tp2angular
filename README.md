@@ -1,4 +1,5 @@
 # Tp2
+Desarrollado por Lucía obregón, Rocío Orlando, Lionel Mancini, Lucas Lenzetti y Lucas Spagnoli.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.4.
 
