@@ -19,7 +19,7 @@ export class ContainerComponent implements OnInit {
   }
 //agregar un libro a nuestro servidor
   async addBookToList(aBook){
-    await this.bookService.addBook(aBook);
+    await this.bookService.addBookToList(aBook);
     
   }
 

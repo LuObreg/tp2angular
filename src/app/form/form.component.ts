@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
       lended: this.lended
       }
 
-      await this.bookService.addBook(book);
+      await this.bookService.addBookToList(book);
       console.log(book);      
       this.newBook.emit();
     }

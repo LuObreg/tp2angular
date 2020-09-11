@@ -22,7 +22,7 @@ export class BookService {
 
 
 // Metodo POST 
-async addBook(aBook){
+async addBookToList(aBook){
   try{
     console.log(aBook);
     let result: any;
@@ -66,7 +66,7 @@ async deleteBook(id){
    }
 
   // Metodo PUT --> logramos hacerlo funcionar pero los cambios solo se ven al actualizar la página
-  async lendBook(aBook){
+  async modifyLended(aBook){
       try{
         let changes = {
           lended: aBook.lended};

@@ -25,7 +25,7 @@ export class ListComponent implements OnInit {
         bookId: book.id,
         lended: this.person
       }
-      await this.bookService.lendBook(aBook);
+      await this.bookService.modifyLended(aBook);
       console.log(aBook);
     }
     
